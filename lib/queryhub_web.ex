@@ -41,6 +41,8 @@ defmodule QueryHubWeb do
       import QueryHubWeb.Router.Helpers
       import QueryHubWeb.ErrorHelpers
       import QueryHubWeb.Gettext
+
+      import ReactPhoenix.ClientSide
     end
   end
 
