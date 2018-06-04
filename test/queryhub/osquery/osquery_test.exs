@@ -88,4 +88,66 @@ defmodule Queryhub.OsqueryTest do
       assert %Ecto.Changeset{} = Osquery.change_query(query)
     end
   end
+
+  describe "packs" do
+    alias Queryhub.Osquery.Pack
+
+    @valid_attrs %{description: "some description", name: "some name"}
+    @update_attrs %{description: "some updated description", name: "some updated name"}
+    @invalid_attrs %{description: nil, name: nil}
+
+    def pack_fixture(attrs \\ %{}) do
+      {:ok, pack} =
+        attrs
+        |> Enum.into(@valid_attrs)
+        |> Osquery.create_pack()
+
+      pack
+    end
+
+    test "list_packs/0 returns all packs" do
+      pack = pack_fixture()
+      assert Osquery.list_packs() == [pack]
+    end
+
+    test "get_pack!/1 returns the pack with given id" do
+      pack = pack_fixture()
+      assert Osquery.get_pack!(pack.id) == pack
+    end
+
+    test "create_pack/1 with valid data creates a pack" do
+      assert {:ok, %Pack{} = pack} = Osquery.create_pack(@valid_attrs)
+      assert pack.description == "some description"
+      assert pack.name == "some name"
+    end
+
+    test "create_pack/1 with invalid data returns error changeset" do
+      assert {:error, %Ecto.Changeset{}} = Osquery.create_pack(@invalid_attrs)
+    end
+
+    test "update_pack/2 with valid data updates the pack" do
+      pack = pack_fixture()
+      assert {:ok, pack} = Osquery.update_pack(pack, @update_attrs)
+      assert %Pack{} = pack
+      assert pack.description == "some updated description"
+      assert pack.name == "some updated name"
+    end
+
+    test "update_pack/2 with invalid data returns error changeset" do
+      pack = pack_fixture()
+      assert {:error, %Ecto.Changeset{}} = Osquery.update_pack(pack, @invalid_attrs)
+      assert pack == Osquery.get_pack!(pack.id)
+    end
+
+    test "delete_pack/1 deletes the pack" do
+      pack = pack_fixture()
+      assert {:ok, %Pack{}} = Osquery.delete_pack(pack)
+      assert_raise Ecto.NoResultsError, fn -> Osquery.get_pack!(pack.id) end
+    end
+
+    test "change_pack/1 returns a pack changeset" do
+      pack = pack_fixture()
+      assert %Ecto.Changeset{} = Osquery.change_pack(pack)
+    end
+  end
 end

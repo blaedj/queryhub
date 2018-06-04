@@ -1,0 +1,18 @@
+<h2>Show Pack</h2>
+
+<ul>
+
+  <li>
+    <strong>Name:</strong>
+    <%= @pack.name %>
+  </li>
+
+  <li>
+    <strong>Description:</strong>
+    <%= @pack.description %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: pack_path(@conn, :edit, @pack) %></span>
+<span><%= link "Back", to: pack_path(@conn, :index) %></span>

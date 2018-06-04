@@ -19,6 +19,7 @@ defmodule QueryhubWeb.Router do
 
     get("/", PageController, :index)
     resources("/queries", QueryController)
+    resources("/packs", PackController)
   end
 
   # Other scopes may use custom stacks.
