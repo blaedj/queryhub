@@ -1,4 +1,4 @@
-# QueryHub
+# QueryHub [![CircleCI](https://circleci.com/gh/kolide/queryhub/tree/master.svg?style=svg)](https://circleci.com/gh/kolide/queryhub/tree/master)
 
 ## Developer Commands
 
