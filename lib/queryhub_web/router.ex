@@ -18,12 +18,7 @@ defmodule QueryhubWeb.Router do
     pipe_through(:browser)
 
     get("/", PageController, :index)
-    get("/queries", QueryController, :index)
-    get("/queries/new", QueryController, :new)
-    get("/queries/create", QueryController, :create)
-    get("/queries/edit", QueryController, :edit)
-    get("/queries/update", QueryController, :update)
-    get("/queries/delete", QueryController, :delete)
+    resources("/queries", QueryController)
   end
 
   # Other scopes may use custom stacks.
