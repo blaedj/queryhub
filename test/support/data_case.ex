@@ -1,4 +1,4 @@
-defmodule Queryhub.DataCase do
+defmodule QueryHub.DataCase do
   @moduledoc """
   This module defines the setup for tests requiring
   access to the application's data layer.
@@ -16,20 +16,20 @@ defmodule Queryhub.DataCase do
 
   using do
     quote do
-      alias Queryhub.Repo
+      alias QueryHub.Repo
 
       import Ecto
       import Ecto.Changeset
       import Ecto.Query
-      import Queryhub.DataCase
+      import QueryHub.DataCase
     end
   end
 
   setup tags do
-    :ok = Ecto.Adapters.SQL.Sandbox.checkout(Queryhub.Repo)
+    :ok = Ecto.Adapters.SQL.Sandbox.checkout(QueryHub.Repo)
 
     unless tags[:async] do
-      Ecto.Adapters.SQL.Sandbox.mode(Queryhub.Repo, {:shared, self()})
+      Ecto.Adapters.SQL.Sandbox.mode(QueryHub.Repo, {:shared, self()})
     end
 
     :ok

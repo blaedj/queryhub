@@ -1,4 +1,4 @@
-defmodule Queryhub.Osquery.Query do
+defmodule QueryHub.Osquery.Query do
   use Ecto.Schema
   import Ecto.Changeset
 

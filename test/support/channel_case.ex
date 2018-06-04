@@ -1,4 +1,4 @@
-defmodule QueryhubWeb.ChannelCase do
+defmodule QueryHubWeb.ChannelCase do
   @moduledoc """
   This module defines the test case to be used by
   channel tests.
@@ -21,15 +21,15 @@ defmodule QueryhubWeb.ChannelCase do
       use Phoenix.ChannelTest
 
       # The default endpoint for testing
-      @endpoint QueryhubWeb.Endpoint
+      @endpoint QueryHubWeb.Endpoint
     end
   end
 
   setup tags do
-    :ok = Ecto.Adapters.SQL.Sandbox.checkout(Queryhub.Repo)
+    :ok = Ecto.Adapters.SQL.Sandbox.checkout(QueryHub.Repo)
 
     unless tags[:async] do
-      Ecto.Adapters.SQL.Sandbox.mode(Queryhub.Repo, {:shared, self()})
+      Ecto.Adapters.SQL.Sandbox.mode(QueryHub.Repo, {:shared, self()})
     end
 
     :ok

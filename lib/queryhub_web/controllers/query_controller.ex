@@ -1,8 +1,8 @@
-defmodule QueryhubWeb.QueryController do
-  use QueryhubWeb, :controller
+defmodule QueryHubWeb.QueryController do
+  use QueryHubWeb, :controller
 
-  alias Queryhub.Osquery
-  alias Queryhub.Osquery.Query
+  alias QueryHub.Osquery
+  alias QueryHub.Osquery.Query
 
   def index(conn, _params) do
     queries = Osquery.list_queries()

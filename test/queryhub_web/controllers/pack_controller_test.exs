@@ -1,14 +1,12 @@
-defmodule QueryhubWeb.PackControllerTest do
-  use QueryhubWeb.ConnCase
-
-  alias Queryhub.Osquery
+defmodule QueryHubWeb.PackControllerTest do
+  use QueryHubWeb.ConnCase
 
   @create_attrs %{description: "some description", name: "some name"}
   @update_attrs %{description: "some updated description", name: "some updated name"}
   @invalid_attrs %{description: nil, name: nil}
 
   def fixture(:pack) do
-    {:ok, pack} = Osquery.create_pack(@create_attrs)
+    {:ok, pack} = QueryHub.Osquery.create_pack(@create_attrs)
     pack
   end
 

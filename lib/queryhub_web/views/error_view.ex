@@ -1,5 +1,5 @@
-defmodule QueryhubWeb.ErrorView do
-  use QueryhubWeb, :view
+defmodule QueryHubWeb.ErrorView do
+  use QueryHubWeb, :view
 
   # If you want to customize a particular status code
   # for a certain format, you may uncomment below.

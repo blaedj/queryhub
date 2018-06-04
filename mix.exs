@@ -1,4 +1,4 @@
-defmodule Queryhub.Mixfile do
+defmodule QueryHub.Mixfile do
   use Mix.Project
 
   def project do
@@ -19,7 +19,7 @@ defmodule Queryhub.Mixfile do
   # Type `mix help compile.app` for more information.
   def application do
     [
-      mod: {Queryhub.Application, []},
+      mod: {QueryHub.Application, []},
       extra_applications: [:logger, :runtime_tools]
     ]
   end

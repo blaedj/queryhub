@@ -1,4 +1,4 @@
-defmodule QueryhubWeb.ConnCase do
+defmodule QueryHubWeb.ConnCase do
   @moduledoc """
   This module defines the test case to be used by
   tests that require setting up a connection.
@@ -19,18 +19,18 @@ defmodule QueryhubWeb.ConnCase do
     quote do
       # Import conveniences for testing with connections
       use Phoenix.ConnTest
-      import QueryhubWeb.Router.Helpers
+      import QueryHubWeb.Router.Helpers
 
       # The default endpoint for testing
-      @endpoint QueryhubWeb.Endpoint
+      @endpoint QueryHubWeb.Endpoint
     end
   end
 
   setup tags do
-    :ok = Ecto.Adapters.SQL.Sandbox.checkout(Queryhub.Repo)
+    :ok = Ecto.Adapters.SQL.Sandbox.checkout(QueryHub.Repo)
 
     unless tags[:async] do
-      Ecto.Adapters.SQL.Sandbox.mode(Queryhub.Repo, {:shared, self()})
+      Ecto.Adapters.SQL.Sandbox.mode(QueryHub.Repo, {:shared, self()})
     end
 
     {:ok, conn: Phoenix.ConnTest.build_conn()}

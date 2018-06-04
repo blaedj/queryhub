@@ -1,3 +1,3 @@
 ExUnit.start()
 
-Ecto.Adapters.SQL.Sandbox.mode(Queryhub.Repo, :manual)
+Ecto.Adapters.SQL.Sandbox.mode(QueryHub.Repo, :manual)

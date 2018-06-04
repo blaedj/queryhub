@@ -1,4 +1,4 @@
-defmodule Queryhub.Repo.Migrations.CreateQueries do
+defmodule QueryHub.Repo.Migrations.CreateQueries do
   use Ecto.Migration
 
   def change do

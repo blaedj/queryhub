@@ -1,12 +1,12 @@
-defmodule QueryhubWeb do
+defmodule QueryHubWeb do
   @moduledoc """
   The entrypoint for defining your web interface, such
   as controllers, views, channels and so on.
 
   This can be used in your application as:
 
-      use QueryhubWeb, :controller
-      use QueryhubWeb, :view
+      use QueryHubWeb, :controller
+      use QueryHubWeb, :view
 
   The definitions below will be executed for every view,
   controller, etc, so keep them short and clean, focused
@@ -19,10 +19,10 @@ defmodule QueryhubWeb do
 
   def controller do
     quote do
-      use Phoenix.Controller, namespace: QueryhubWeb
+      use Phoenix.Controller, namespace: QueryHubWeb
       import Plug.Conn
-      import QueryhubWeb.Router.Helpers
-      import QueryhubWeb.Gettext
+      import QueryHubWeb.Router.Helpers
+      import QueryHubWeb.Gettext
     end
   end
 
@@ -30,7 +30,7 @@ defmodule QueryhubWeb do
     quote do
       use Phoenix.View,
         root: "lib/queryhub_web/templates",
-        namespace: QueryhubWeb
+        namespace: QueryHubWeb
 
       # Import convenience functions from controllers
       import Phoenix.Controller, only: [get_flash: 2, view_module: 1]
@@ -38,9 +38,9 @@ defmodule QueryhubWeb do
       # Use all HTML functionality (forms, tags, etc)
       use Phoenix.HTML
 
-      import QueryhubWeb.Router.Helpers
-      import QueryhubWeb.ErrorHelpers
-      import QueryhubWeb.Gettext
+      import QueryHubWeb.Router.Helpers
+      import QueryHubWeb.ErrorHelpers
+      import QueryHubWeb.Gettext
     end
   end
 
@@ -55,7 +55,7 @@ defmodule QueryhubWeb do
   def channel do
     quote do
       use Phoenix.Channel
-      import QueryhubWeb.Gettext
+      import QueryHubWeb.Gettext
     end
   end
 

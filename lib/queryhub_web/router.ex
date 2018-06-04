@@ -1,5 +1,5 @@
-defmodule QueryhubWeb.Router do
-  use QueryhubWeb, :router
+defmodule QueryHubWeb.Router do
+  use QueryHubWeb, :router
 
   pipeline :browser do
     plug(:accepts, ["html"])
@@ -13,7 +13,7 @@ defmodule QueryhubWeb.Router do
     plug(:accepts, ["json"])
   end
 
-  scope "/", QueryhubWeb do
+  scope "/", QueryHubWeb do
     # Use the default browser stack
     pipe_through(:browser)
 
@@ -23,7 +23,7 @@ defmodule QueryhubWeb.Router do
   end
 
   # Other scopes may use custom stacks.
-  # scope "/api", QueryhubWeb do
+  # scope "/api", QueryHubWeb do
   #   pipe_through :api
   # end
 end

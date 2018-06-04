@@ -1,5 +1,5 @@
-defmodule QueryhubWeb.PageControllerTest do
-  use QueryhubWeb.ConnCase
+defmodule QueryHubWeb.PageControllerTest do
+  use QueryHubWeb.ConnCase
 
   test "GET /", %{conn: conn} do
     conn = get(conn, "/")

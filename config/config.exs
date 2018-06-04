@@ -7,14 +7,14 @@ use Mix.Config
 
 # General application configuration
 config :queryhub,
-  ecto_repos: [Queryhub.Repo]
+  ecto_repos: [QueryHub.Repo]
 
 # Configures the endpoint
-config :queryhub, QueryhubWeb.Endpoint,
+config :queryhub, QueryHubWeb.Endpoint,
   url: [host: "localhost"],
   secret_key_base: "u1GxkRxnkafqC0hXWF1XKZpx7CsENe/PX7uz2/oKqu1u1IE/i/a4q4wpcXiXwcPw",
-  render_errors: [view: QueryhubWeb.ErrorView, accepts: ~w(html json)],
-  pubsub: [name: Queryhub.PubSub, adapter: Phoenix.PubSub.PG2]
+  render_errors: [view: QueryHubWeb.ErrorView, accepts: ~w(html json)],
+  pubsub: [name: QueryHub.PubSub, adapter: Phoenix.PubSub.PG2]
 
 # Configures Elixir's Logger
 config :logger, :console,

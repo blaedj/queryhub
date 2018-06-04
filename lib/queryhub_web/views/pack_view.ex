@@ -1,3 +1,3 @@
-defmodule QueryhubWeb.PackView do
-  use QueryhubWeb, :view
+defmodule QueryHubWeb.PackView do
+  use QueryHubWeb, :view
 end

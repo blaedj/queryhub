@@ -1,5 +1,5 @@
-defmodule QueryhubWeb.PageController do
-  use QueryhubWeb, :controller
+defmodule QueryHubWeb.PageController do
+  use QueryHubWeb, :controller
 
   def index(conn, _params) do
     render(conn, "index.html")

@@ -1,7 +1,7 @@
-defmodule QueryhubWeb.Endpoint do
+defmodule QueryHubWeb.Endpoint do
   use Phoenix.Endpoint, otp_app: :queryhub
 
-  socket("/socket", QueryhubWeb.UserSocket)
+  socket("/socket", QueryHubWeb.UserSocket)
 
   # Serve at "/" the static files from "priv/static" directory.
   #
@@ -45,7 +45,7 @@ defmodule QueryhubWeb.Endpoint do
     signing_salt: "iSiuG6G/"
   )
 
-  plug(QueryhubWeb.Router)
+  plug(QueryHubWeb.Router)
 
   @doc """
   Callback invoked for dynamically configuring the endpoint.

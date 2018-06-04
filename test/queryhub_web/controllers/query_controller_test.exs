@@ -1,7 +1,5 @@
-defmodule QueryhubWeb.QueryControllerTest do
-  use QueryhubWeb.ConnCase
-
-  alias Queryhub.Osquery
+defmodule QueryHubWeb.QueryControllerTest do
+  use QueryHubWeb.ConnCase
 
   @create_attrs %{
     description: "some description",
@@ -26,7 +24,7 @@ defmodule QueryhubWeb.QueryControllerTest do
   }
 
   def fixture(:query) do
-    {:ok, query} = Osquery.create_query(@create_attrs)
+    {:ok, query} = QueryHub.Osquery.create_query(@create_attrs)
     query
   end
 

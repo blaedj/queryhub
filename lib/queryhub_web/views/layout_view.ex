@@ -1,3 +1,3 @@
-defmodule QueryhubWeb.LayoutView do
-  use QueryhubWeb, :view
+defmodule QueryHubWeb.LayoutView do
+  use QueryHubWeb, :view
 end

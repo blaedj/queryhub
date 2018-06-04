@@ -1,3 +1,3 @@
-defmodule QueryhubWeb.LayoutViewTest do
-  use QueryhubWeb.ConnCase, async: true
+defmodule QueryHubWeb.LayoutViewTest do
+  use QueryHubWeb.ConnCase, async: true
 end

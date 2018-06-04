@@ -1,14 +1,14 @@
-defmodule QueryhubWeb.ErrorViewTest do
-  use QueryhubWeb.ConnCase, async: true
+defmodule QueryHubWeb.ErrorViewTest do
+  use QueryHubWeb.ConnCase, async: true
 
   # Bring render/3 and render_to_string/3 for testing custom views
   import Phoenix.View
 
   test "renders 404.html" do
-    assert render_to_string(QueryhubWeb.ErrorView, "404.html", []) == "Not Found"
+    assert render_to_string(QueryHubWeb.ErrorView, "404.html", []) == "Not Found"
   end
 
   test "renders 500.html" do
-    assert render_to_string(QueryhubWeb.ErrorView, "500.html", []) == "Internal Server Error"
+    assert render_to_string(QueryHubWeb.ErrorView, "500.html", []) == "Internal Server Error"
   end
 end
