@@ -18,6 +18,7 @@ defmodule QueryHubWeb.Router do
     pipe_through(:browser)
 
     get("/", PageController, :index)
+    get("/discover", SearchController, :discover)
     resources("/queries", QueryController)
     resources("/packs", PackController)
   end

@@ -1,36 +1,44 @@
-<div class="jumbotron">
-  <h2><%= gettext "Welcome to %{name}!", name: "Phoenix" %></h2>
-  <p class="lead">A productive web framework that<br />does not compromise speed and maintainability.</p>
+<div class="px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+  <h1 class="display-4"><%= gettext "%{name}", name: "QueryHub" %></h1>
+  <p class="lead">A community application for creating and sharing <a href="https://osquery.io">osquery</a> configuration</p>
+  <p>QueryHub is an open-source web application that allows you to curate your own set of queries and packs for your osquery installation.</p>
 </div>
 
-<div class="row marketing">
-  <div class="col-lg-6">
-    <h4>Resources</h4>
-    <ul>
-      <li>
-        <a href="http://phoenixframework.org/docs/overview">Guides</a>
-      </li>
-      <li>
-        <a href="https://hexdocs.pm/phoenix">Docs</a>
-      </li>
-      <li>
-        <a href="https://github.com/phoenixframework/phoenix">Source</a>
-      </li>
-    </ul>
+<div class="divider-prompt">I want to...</div>
+
+<div class="card-deck mb-3 text-center">
+  <div class="card mb-4 box-shadow">
+    <div class="card-header">
+      <h4 class="my-0 font-weight-normal">Find recommended queries</h4>
+    </div>
+    <div class="card-body">
+      <p>QueryHub features a list of recommended queries, based on curated lists from
+      contributing organizations and the most popular queries in the QueryHub community.</p>
+      <button type="button" class="btn btn-lg btn-block btn-outline-primary">View Recommended Queries</button>
+    </div>
   </div>
 
-  <div class="col-lg-6">
-    <h4>Help</h4>
-    <ul>
-      <li>
-        <a href="http://groups.google.com/group/phoenix-talk">Mailing list</a>
-      </li>
-      <li>
-        <a href="http://webchat.freenode.net/?channels=elixir-lang">#elixir-lang on freenode IRC</a>
-      </li>
-      <li>
-        <a href="https://twitter.com/elixirphoenix">@elixirphoenix</a>
-      </li>
-    </ul>
+  <div class="card mb-4 box-shadow">
+    <div class="card-header">
+      <h4 class="my-0 font-weight-normal">Find specific queries</h4>
+    </div>
+    <div class="card-body">
+      <p>Need to put together your own query packs for a specific use case? You can find
+      queries based on various search options, such as applicable phases of the attack
+      lifecycle, the target operating system, compatible versions of osquery, and more.</p>
+      <button type="button" class="btn btn-lg btn-block btn-outline-primary">View the Discover Page</button>
+    </div>
+  </div>
+
+  <div class="card mb-4 box-shadow">
+    <div class="card-header">
+      <h4 class="my-0 font-weight-normal">Store and Share Queries</h4>
+    </div>
+    <div class="card-body">
+      <p>You can upload, store, and share your collection of queries on QueryHub, construct new
+      packs by composing your own queries with community-contributed queries, and download your configurations
+      in JSON and YAML formats digestible by osquery and <a href="https://github.com/kolide/fleet/issues/1576">fleetctl</a>.</p>
+      <button type="button" class="btn btn-lg btn-block btn-outline-primary">Upload a Query</button>
+    </div>
   </div>
 </div>
