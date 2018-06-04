@@ -1,11 +1,6 @@
-<div class="px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-</div>
-
 <div class="row">
   <div class="col=sm">
-    <h2>
-      <%= gettext "%{name}", name: "Discover" %>
-    </h2>
+    <h2>Discover</h2>
     <form>
       <div class="form-group">
         <label for="popularTags">Popular Tags</label>
