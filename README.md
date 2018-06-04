@@ -32,7 +32,7 @@ Start the local development infrastructure:
 docker-compose up -d
 ```
 
-Run the database migrations for all OTP apps which have a database:
+Run the database migrations:
 
 ```
 mix ecto.create
@@ -41,7 +41,7 @@ mix ecto.migrate
 
 ### Testing
 
-Run the Elixir tests for all apps:
+Run the tests:
 
 ```
 mix test
@@ -49,7 +49,7 @@ mix test
 
 ### Running Locally
 
-Start all of the apps and run all of the servers:
+Once you have started the development infrastructure and ran the database migrations, run the following to start the Phoenix server:
 
 ```
 mix phx.server
@@ -62,3 +62,9 @@ You can also use `iex` to launch an interactive Elixr REPL:
 ```
 iex -S mix
 ```
+
+### Formatting Your Code
+
+Use `mix format` to format all Elixir code before submitting a Pull Request. Consider using an editor plugin which will format your code on file write.
+
+- Vim users may consider installing the [mhinz/mix-vim-format](https://github.com/mhinz/vim-mix-format) plugin and enabling the `mix_format_on_save` option.
