@@ -1,5 +1,9 @@
 defmodule QueryHub.Application do
   def start(_type, _args) do
+    unless Mix.env == :prod do
+      Envy.auto_load
+    end
+
     children = [
       Supervisor.Spec.supervisor(QueryHub.Repo, []),
       Supervisor.Spec.supervisor(QueryHubWeb.Endpoint, [])

@@ -63,6 +63,14 @@ You can also use `iex` to launch an interactive Elixr REPL:
 iex -S mix
 ```
 
+You can set various configurations via local environment variables (e.g. github
+app credentials when working on github oauth) in a `.env` file in the root of
+the project. Any env vars defined here in the format 
+```
+FOO=bar
+```
+will be available via `System.get_env('FOO')` in the application.
+
 ### Formatting Your Code
 
 Use `mix format` to format all Elixir code before submitting a Pull Request. Consider using an editor plugin which will format your code on file write.

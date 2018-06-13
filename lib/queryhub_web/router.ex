@@ -24,6 +24,12 @@ defmodule QueryHubWeb.Router do
     resources("/packs", PackController)
   end
 
+  scope "/auth", QueryHubWeb do
+    pipe_through(:browser)
+    get "/:provider", AuthController, :request
+    get "/:provider/callback", AuthController, :callback
+  end
+
   # Other scopes may use custom stacks.
   # scope "/api", QueryHubWeb do
   #   pipe_through :api

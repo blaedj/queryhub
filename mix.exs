@@ -20,7 +20,7 @@ defmodule QueryHub.Mixfile do
   def application do
     [
       mod: {QueryHub.Application, []},
-      extra_applications: [:logger, :runtime_tools]
+      extra_applications: [:logger, :runtime_tools, :uberauth_github]
     ]
   end
 
@@ -41,7 +41,9 @@ defmodule QueryHub.Mixfile do
       {:phoenix_live_reload, "~> 1.0", only: :dev},
       {:gettext, "~> 0.11"},
       {:cowboy, "~> 1.0"},
-      {:react_phoenix, "~> 0.6.0"}
+      {:react_phoenix, "~> 0.6.0"},
+      {:envy, "~> 1.1.1"},
+      {:ueberauth_github, "~> 0.7"},
     ]
   end
 
